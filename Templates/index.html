@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <title>Where is Dominguez?</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Dominguez is:</h1>
+      <br>
+      <h2 id="msg"> <strong>{{ update.msg }}</strong></h2>
+    </div>
+
+    <div class="jumbotron text-center">
+      <h1>Materials for Class Today:</h1>
+      <br>
+      <h2 id="materials"> <strong>{{ update.materials }}</strong></h2>
+    </div>
+    <!--- script for refreshing the msg every 10(?) seconds with jquery --->
+      <script>
+      function updateCompletion(){
+          $("#msg").load("/ #msg");
+          $("#materials").load("/ #materials")
+      };
+
+      setInterval(updateCompletion, 1000)
+    </script>
+  </body>
+</html>
