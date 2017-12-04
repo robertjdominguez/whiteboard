@@ -6,7 +6,7 @@ import random
 
 '''
 Basic Flask app utilizing Twilio to update a board whenever I text it.
-I plan on utiliting it for letting people know where I am at school, and telling
+I plan on utilizing it for letting people know where I am at school, and telling
 my students which materials they'll need for class that day.
 
 Process:
@@ -48,7 +48,7 @@ def update_text():
        resp_update.message('Updating the board now')
        # Split the message after the colon (this is what we want to use for upd.)
        update = message_body.split(":",1)[1]
-       print(update)
+       
 
        # Pass the update into the db where id = 1
        updated_msg = Updates.query.filter_by(id=1).first()
@@ -61,7 +61,7 @@ def update_text():
        resp_update.message('Updating the board for students now')
        # Split the message after the colon (this is what we want to use for upd.)
        material_update = message_body.split(":",1)[1]
-       print(material_update)
+       
 
        # Pass the update into the db where id = 1
        updated_materials = Updates.query.filter_by(id=1).first()
