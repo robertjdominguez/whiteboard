@@ -59,7 +59,7 @@ def update_text():
 
     if "Materials" in message_body:
        resp_update.message('Updating the board for students now')
-       # Split the message after the colon (this is what we want to use for upd.)
+       # Split the message after the colon (this is what we want to use for materials.)
        material_update = message_body.split(":",1)[1]
        
 
